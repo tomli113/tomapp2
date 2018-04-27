@@ -1,8 +1,7 @@
 {
     "modules":
 	{
-        "link-1":	      {"url":"../../../pages/framework/under-construction.html","name_for_search":"Link 1","text":"Under Construction"},
-		"link-2":	      {"url":"../../../pages/framework/under-construction.html","name_for_search":"Link 2","text":"Not Ready"},
-		"link-3":	      {"url":"../../../pages/framework/under-construction.html","name_for_search":"Link 3","text":"Comming soon..."}
+        "woolworths-transaction-data":	{"table_id":"20010375","url":"modules/woolworths-transaction-data.html","form_module":"woolworths-transaction-form","name_for_search":"Woolworths transaction data"},
+		"woolworths-transaction-form":	{"table_id":"20010375","url":"modules/woolworths-transaction-form.html","name_for_search":"Woolworths transaction form"}
 	}
 }

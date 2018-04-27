@@ -1,0 +1,46 @@
+<section>
+    VmInclude:__COMPONENT__/grid/grid.v3.html
+</section>
+<script>
+    function F__ID(){
+        //-------------------------------------
+        var fields="Transaction_Date,Description,Debit,Credit,Category,Subcategory,Notes";
+        _fields="_Form,"+fields+",Submit Date|DateTime,Submitted by|Author,_Delete";
+        //-------------------------------------
+        VmInclude:__COMPONENT__/grid/grid.v3.js
+        VmInclude:__CURRENT_PATH__/task_data.js
+        //-------------------------------------
+		_cell_render=function(records,I,field,td,set_value,source){
+            switch(field){
+                case 'Transaction_Date':
+					var html='<input type=date style="border:none" />';
+					$vm.render_input_field(records[I],'__ID',td,html);
+                    break;
+                case 'Debit':
+                case 'Credit':
+                    td.css("text-align","right").css('white-space','nowrap');
+                    break;
+            }
+        }
+        //-------------------------------------
+		_before_submit=function(record,dbv){
+            dbv.DT1=record.Transaction_Date;
+            dbv.V1='0'; if(record.Debit!='')   dbv.V1=record.Debit;
+            dbv.V2='0'; if(record.Credit!='')  dbv.V2=record.Credit;
+            dbv.S1=record.Category;
+            dbv.S2=record.Subcategory;
+            return true;
+        }
+        //-------------------------------------
+		//convert the existed au date to the new standard format
+        _data_process=function(){
+            for(var i=0;i<_records.length;i++){
+                _records[i].Transaction_Date=$vm.au_date_to_string_yyyymmdd(_records[i].Transaction_Date);
+            }
+        }
+        //-------------------------------------
+    }
+</script>
+<style>
+    VmInclude:__COMPONENT__/grid/grid.v3.css
+</style>
