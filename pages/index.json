@@ -2,6 +2,14 @@
     "modules":
 	{
         "woolworths-transaction-data":	{"table_id":"20010375","url":"modules/woolworths-transaction-data.html","form_module":"woolworths-transaction-form","name_for_search":"Woolworths transaction data"},
-		"woolworths-transaction-form":	{"table_id":"20010375","url":"modules/woolworths-transaction-form.html","name_for_search":"Woolworths transaction form"}
+		"woolworths-transaction-form":	{"table_id":"20010375","url":"modules/woolworths-transaction-form.html","name_for_search":"Woolworths transaction form"},
+        "my-information-data":	        {"table_id":"20008500","url":"modules/my-information-data.html","form_module":"my-information-form","name_for_search":"My information data"},
+		"my-information-form":	        {"table_id":"20008500","url":"modules/my-information-form.html","name_for_search":"My information form"},
+        "booking-notes-data":	        {"table_id":"20008495","url":"modules/booking-notes-data.html","form_module":"booking-notes-form","name_for_search":"Booking notes data"},
+		"booking-notes-form":	        {"table_id":"20008495","url":"modules/booking-notes-form.html","name_for_search":"Booking notes form"},
+        "caculation-data":	            {"table_id":"20008496","url":"modules/caculation-data.html","form_module":"caculation-form","name_for_search":"caculation data"},
+		"caculation-form":	            {"table_id":"20008496","url":"modules/caculation-form.html","name_for_search":"Caculation form"},
+        "checkbox-data":	            {"table_id":"20008498","url":"modules/checkbox-data.html","form_module":"checkbox-form","name_for_search":"Checkbox data"},
+		"checkbox-form":	            {"table_id":"20008498","url":"modules/checkbox-form.html","name_for_search":"Checkbox form"}
 	}
 }
